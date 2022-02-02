@@ -1,11 +1,9 @@
-import './App.css';
+import RoutesApp from './routes';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <h1> Link Test</h1>
+    <div className="app">
+      <RoutesApp />
     </div>
   );
 }
-
-export default App;
