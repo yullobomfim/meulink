@@ -7,15 +7,14 @@ export default function Home() {
     <div className="container-home">
       <div className="logo">
         <img src="/logo.png" alt="Link Logo" />
-        <h1>Home Page</h1>
-        <span> Cole seu link para encurtar</span>
+        <h1>Home</h1>
+        <span> Cole um link para encurtar</span>
       </div>
       <div className="area-input">
         <div>
           <FiLink size={24} color='#FFF' />
           <input placeholder='Cole seu link aqui' />
         </div>
-
         <button>Encurtar Link</button>
       </div>
       <Menu/>
