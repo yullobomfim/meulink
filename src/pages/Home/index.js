@@ -26,7 +26,7 @@ const [link, setLink] = useState('');
           onChange={ (e) => setLink(e.target.value)}
           />
         </div>
-        <button onClick={handleShortLink}>Shorten link</button>
+        <button onClick={handleShortLink }>Shorten link</button>
       </div>
       <Menu/>
     </div>
