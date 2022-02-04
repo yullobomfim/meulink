@@ -1,7 +1,6 @@
 import './links.css';
 import { FiArrowLeft, FiLink, FiTrash } from 'react-icons/fi';
 import { Link } from 'react-router-dom'
-import Menu from '../../components/menu'
 
 
 export default function Links() {
