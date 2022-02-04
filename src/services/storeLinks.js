@@ -1,4 +1,3 @@
-//buscar os links
 
 export async function getLinksSave(key) {
     const myLinks = await localStorage.getItem(key)
@@ -7,27 +6,21 @@ export async function getLinksSave(key) {
     return linksSaves;
 }
 
-
-
-//salvar o link quando encurtar
 export async function saveLink(key, newLink) {
     let linksStored = await getLinksSave(key);
 
-    //se ja existir um link salvo nao permitir a duplicação de links
     const hasLink = linksStored.some(link => link.id === newLink.id)
 
     if (hasLink) {
-        console.log('esse link ja existe')
+        console.log(' Already exists')
         return;
     }
 
-    //adicionar
     linksStored.push(newLink);
     await localStorage.setItem(key, JSON.stringify(linksStored))
-    console.log('salvo com sucesso');
+    console.log('Saved Successfully');
 
 }
-//deletar algum link salvo
 
 export function deleteLink(links, id){
 
@@ -37,8 +30,7 @@ return (item.id !== id)
 })
 
 localStorage.setItem('shortenLink', JSON.stringify(myLinks))
-console.log('link deletado com sucesso')
+console.log('Deleted Successfully')
 
 return myLinks;
-
 }

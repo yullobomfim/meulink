@@ -2,10 +2,7 @@ import './error.css';
 import { Link} from 'react-router-dom';
 
 
-
 export default function Error(){
-
-
 
     return(
     <div className="container-error">
@@ -15,9 +12,5 @@ export default function Error(){
             Back to Home
         </Link>
     </div>
-
-)    
-
-
-
+    )    
 }

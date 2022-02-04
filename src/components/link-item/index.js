@@ -5,7 +5,7 @@ export default function LinkItem( {closeModal, content }) {
     
     async function copyLink(){
         await navigator.clipboard.writeText(content.link)
-        alert("URL copiada com sucesso!");
+        alert("URL copied Successfully!");
     }
     
     return (
@@ -26,6 +26,5 @@ export default function LinkItem( {closeModal, content }) {
                 <FiClipboard size={20} color='#FFF' />
             </button>
         </div>
-
     )
 }
