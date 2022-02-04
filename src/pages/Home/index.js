@@ -5,12 +5,14 @@ import './home.css'
 import Menu from '../../components/menu'
 import LinkItem from '../../components/link-item'
 import api from '../../services/api';
+import{ saveLink } from '../../services/storeLinks'
+
 
 export default function Home() {
   const [link, setLink] = useState('');
   const [data, setData] = useState({});
   const [showModal, setShowModal] = useState(false);
-
+  
   async function handleShortLink() {
     try {
       const response = await api.post('/shorten', {
@@ -19,6 +21,9 @@ export default function Home() {
 
       setData(response.data);
       setShowModal(true);
+      
+      saveLink('@shortenLink', response.data);
+
       setLink('');
 
 
