@@ -1,11 +1,10 @@
 //buscar os links
 
 export async function getLinksSave(key) {
-    const myLinks = await localStorage.getItem('key')
+    const myLinks = await localStorage.getItem(key)
 
-    let linksSaved = JSON.parse(myLinks) || [];
-    return linksSaved;
-
+    let linksSaves = JSON.parse(myLinks) || [];
+    return linksSaves;
 }
 
 
